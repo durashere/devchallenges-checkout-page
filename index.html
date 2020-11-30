@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>RECIPE PAGE</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">Checkout</h1>
+
+      <div class="cart">
+        <div class="items">
+          <div class="item">
+            <img src="images/photo1.png" alt="backpack" />
+            <div class="info">
+              <p>Vintage Backbag</p>
+              <div class="prices">
+                <p class="price-new">$54.99</p>
+                <p class="price-old">$94.99</p>
+              </div>
+              <div class="amount">
+                <button>-</button>
+                <p>1</p>
+                <button>+</button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/photo2.png" alt="backpack" />
+            <div class="info">
+              <p>Levi Shoes</p>
+              <div class="prices">
+                <p class="price-new">$74.99</p>
+                <p class="price-old">$124.99</p>
+              </div>
+              <div class="amount">
+                <button>-</button>
+                <p>1</p>
+                <button>+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pricing">
+          <hr />
+          <div class="shipping-cost">
+            <p>Shipping</p>
+            <p>$19</p>
+          </div>
+          <hr />
+          <div class="total">
+            <p>Total</p>
+            <p>$148.98</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact">
+        <h2>Contact infomation</h2>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <div class="input__wrapper">
+            <span class="material-icons"> email </span>
+            <input id="email" placeholder="Enter your email..." />
+          </div>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <div class="input__wrapper">
+            <span class="material-icons"> call </span>
+            <input id="phone" placeholder="Enter your phone..." />
+          </div>
+        </div>
+      </div>
+
+      <div class="shipping">
+        <h2>Shipping address</h2>
+        <div class="field">
+          <label for="fullname">Full name</label>
+          <div class="input__wrapper">
+            <span class="material-icons"> account_circle </span>
+            <input id="fullname" placeholder="Your full name..." />
+          </div>
+        </div>
+        <div class="field">
+          <label for="address">Address</label>
+          <div class="input__wrapper">
+            <span class="material-icons"> home </span>
+            <input id="address" placeholder="Your address..." />
+          </div>
+        </div>
+        <div class="field">
+          <label for="city">City</label>
+          <div class="input__wrapper">
+            <span class="material-icons"> location_city </span>
+            <input id="city" placeholder="Your city..." />
+          </div>
+        </div>
+        <div class="field__wrapper-double">
+          <div class="field">
+            <label for="city">Country</label>
+            <div class="input__wrapper">
+              <span class="material-icons"> location_city </span>
+              <select id="country">
+                <option value="0">Your country...</option>
+                <option value="1">Poland</option>
+                <option value="2">Germany</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="postalcode">Postal code</label>
+            <div class="input__wrapper">
+              <span class="material-icons"> markunread_mailbox </span>
+              <input id="postalcode" placeholder="Your postal code..." />
+            </div>
+          </div>
+        </div>
+        <div class="remember">
+          <input type="checkbox" id="remember" />
+          <label for="remember">Save this information for next time</label>
+        </div>
+      </div>
+      <div class="continue">
+        <button>Continue</button>
+      </div>
+      <div class="footer">
+        <p>
+          <a href="https://github.com/durashere">durashere</a> @
+          <a href="https://devchallenges.io">DevChallenges.io</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+:root {
+  --color-footer: #a9a9a9;
+  --color-background: #ffffff;
+  --color-orange: #f2994a;
+
+  --font-mont: "Montserrat", sans-serif;
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-primary);
+  font-family: var(--font-mont);
+  font-weight: 600;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  gap: var(--space-lg);
+  width: 95%;
+  height: 100vh;
+  margin: var(--space-md) auto;
+
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "header"
+    "cart"
+    "contact"
+    "shipping"
+    "continue"
+    "footer";
+}
+
+.header {
+  grid-area: header;
+}
+.cart {
+  grid-area: cart;
+}
+.footer {
+  grid-area: footer;
+}
+.contact {
+  grid-area: contact;
+}
+.shipping {
+  grid-area: shipping;
+}
+.continue {
+  grid-area: continue;
+}
+
+/* Header */
+
+.header {
+  color: #4e5150;
+  font-size: 1.5rem;
+}
+
+/* Cart */
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-xxl);
+
+  background: #f2f2f2;
+
+  border-radius: 0.75rem;
+  padding: 2rem;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: var(--space-md);
+}
+
+.item img {
+  border-radius: 1rem;
+}
+
+.item .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.item .info p {
+  color: #4e5150;
+  font-size: 0.75rem;
+}
+
+.item .info .prices {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.item .info .prices .price-new {
+  color: var(--color-orange);
+  font-size: 0.875rem;
+}
+
+.item .info .prices .price-old {
+  text-decoration-line: line-through;
+  font-size: 0.625rem;
+}
+
+.item .info .amount {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 0.75rem;
+  border: 1px solid #828282;
+  border-radius: 0.75rem;
+}
+
+.item .info .amount p {
+  color: #333333;
+
+  display: flex;
+}
+
+.item .info .amount button {
+  color: #828282;
+  background: #e0e0e0;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.cart .pricing {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.cart .pricing hr {
+  border: 1px solid #bdbdbd;
+}
+
+.cart .pricing .shipping-cost,
+.cart .pricing .total {
+  color: 333333;
+  font-size: 0.875rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Contact / Shipping */
+
+.contact,
+.shipping {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contact h2,
+.shipping h2 {
+  color: #333333;
+  font-size: 0.875rem;
+}
+
+/* Field */
+
+.field {
+  color: #4f4f4f;
+  gap: var(--space-xs);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 0.625rem;
+}
+
+.field .input__wrapper {
+  color: #828282;
+
+  display: flex;
+  gap: var(--space-xs);
+
+  padding: 0.3rem;
+  border: 1px solid #828282;
+  box-sizing: border-box;
+  border-radius: 0.75rem;
+}
+
+.field .input__wrapper span {
+  transform: scale(0.8);
+}
+
+.field .input__wrapper input {
+  font-size: 0.75rem;
+  border: none;
+}
+
+.field__wrapper-double {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.field__wrapper-double div {
+  flex: 1 1 50%;
+}
+
+.field__wrapper-double select {
+  color: #828282;
+  font-size: 0.75rem;
+  border: none;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.remember label {
+  color: #4f4f4f;
+  font-size: 0.625rem;
+}
+/* Continue */
+
+.continue {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.continue button {
+  color: #ffffff;
+  font-size: 1rem;
+  border-radius: 0.75rem;
+  padding: 1rem 2rem;
+  background: var(--color-orange);
+  border-radius: 0.75rem;
+  outline: none;
+  border: none;
+}
+
+/* Footer */
+
+.footer * {
+  color: var(--color-footer);
+  font-size: 0.875rem;
+
+  text-align: center;
+  text-decoration: none;
+}
