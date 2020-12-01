@@ -39,7 +39,6 @@ img {
   margin: var(--space-md) auto;
 
   display: grid;
-  grid-template-rows: auto auto auto;
   grid-template-areas:
     "header"
     "cart"
@@ -144,7 +143,7 @@ img {
 
 .item .info .amount p {
   color: #333333;
-
+  font-size: 1rem;
   display: flex;
 }
 
@@ -170,7 +169,7 @@ img {
 
 .cart .pricing .shipping-cost,
 .cart .pricing .total {
-  color: 333333;
+  color: #333333;
   font-size: 0.875rem;
 
   display: flex;
@@ -204,6 +203,11 @@ img {
 
 .field label {
   font-size: 0.625rem;
+}
+
+.field input {
+  font-size: 0.75rem;
+  width: 100%;
 }
 
 .field .input__wrapper {
@@ -241,6 +245,7 @@ img {
   color: #828282;
   font-size: 0.75rem;
   border: none;
+  width: 100%;
 }
 
 .remember {
@@ -279,4 +284,127 @@ img {
 
   text-align: center;
   text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 65%;
+    gap: var(--space-xl);
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header"
+      "contact cart"
+      "shipping cart"
+      "continue ."
+      "footer footer";
+  }
+  .header {
+    grid-area: header;
+  }
+  .cart {
+    grid-area: cart;
+  }
+  .contact {
+    grid-area: contact;
+  }
+  .shipping {
+    grid-area: shipping;
+  }
+  .continue {
+    grid-area: continue;
+  }
+  .footer {
+    grid-area: footer;
+  }
+
+  /* Header */
+
+  .header {
+    font-size: 2.25rem;
+  }
+
+  /* Cart */
+
+  .item {
+    gap: var(--space-lg);
+  }
+
+  .item .info p {
+    font-size: 1rem;
+  }
+
+  .item .info .prices .price-new {
+    font-size: 1rem;
+  }
+
+  .item .info .prices .price-old {
+    font-size: 0.75rem;
+  }
+
+  .item .info .amount button {
+    color: #828282;
+    background: #e0e0e0;
+    border-radius: 0.25rem;
+    outline: none;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .cart .pricing .shipping-cost,
+  .cart .pricing .total {
+    font-size: 1.125rem;
+  }
+
+  /* Contact / Shipping */
+
+  .contact h2,
+  .shipping h2 {
+    font-size: 1.125rem;
+  }
+
+  /* Field */
+
+  .field {
+    gap: var(--space-sm);
+  }
+
+  .field label {
+    font-size: 0.75rem;
+  }
+
+  .field input {
+    font-size: 1rem;
+  }
+
+  .field .input__wrapper {
+    gap: var(--space-sm);
+    padding: 0.6rem;
+  }
+
+  .field .input__wrapper span {
+    transform: scale(0.9);
+  }
+
+  .field .input__wrapper input {
+    font-size: 1rem;
+  }
+
+  .field__wrapper-double select {
+    font-size: 1rem;
+  }
+
+  .remember {
+    gap: var(--space-sm);
+  }
+
+  .remember label {
+    font-size: 0.75rem;
+  }
+  /* Continue */
+
+  .continue button {
+    padding: 1rem 4rem;
+  }
 }
